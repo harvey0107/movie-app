@@ -8,7 +8,7 @@ function App() {
        <h1>Movie App</h1>
       </header>
       <main>
-        
+        <Search />
       </main>
     </div>
   );
