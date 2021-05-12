@@ -25,10 +25,32 @@ main {
   width: 100%;
   max-width: 960px;
   margin: 0;
+  border: none;
 }
 
 section{
-  display: block;
-  width: 100%;
   padding: 15px;
+  border: none;
+}
+
+.searchbox{
+  display:block;
+  width: 60%;
+  padding: 15px;
+  border: none;
+  background: none;
+  background-color: white;
+  border-radius: 10px;
+  color: darkgray;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.4s ease-out;
+  text-align: center;
+  position: absolute;
+  margin-left: 20%;
+}
+
+.searchbox:focus {
+  box-shadow: 0px 0px 10px 5px darkgrey;
+  border: none;
 }
