@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
 import Search from './components/Search'
+import Results from './components/Results'
 import axios from 'axios'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           });
         });
     }
+   
   }
 
   const handleInput = (event) => {
@@ -37,6 +39,7 @@ function App() {
       </header>
       <main>
         <Search handleInput={handleInput} search={search}/>
+        <Results results={state.results} />
       </main>
     </div>
   );
