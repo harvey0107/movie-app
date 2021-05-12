@@ -10,10 +10,11 @@ function App() {
   const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=92c99205";
   
   const handleInput = (event) => {
-    let movie = event.traget.vaule
+    let movie = event.target.value
     setState(preveState => {
       return {...preveState, movie: movie}
-    })
+    });
+    console.log(state.movie)
   }
   
   return (
@@ -22,7 +23,7 @@ function App() {
        <h1>Movie App</h1>
       </header>
       <main>
-        <Search />
+        <Search handleInput={handleInput} />
       </main>
     </div>
   );
