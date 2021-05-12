@@ -6,7 +6,9 @@
 
 body {
   font-family: sans-serif;
-  background-color: black;
+  background-image: url("./movie.jpg");
+  background-size: cover;
+
 
 }
 
