@@ -10,7 +10,7 @@ function App() {
     results:[],
     selected:{}
   });
-  const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=92c99205";
+  const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
   
   const search = (event) => {
     if (event.key === "Enter"){
@@ -33,9 +33,10 @@ function App() {
     
   }
 
-  const openPopup = id =>{
-    axios(apiurl + '&i' + id).then(({data})=>{
+  const openPopup = id => {
+    axios(apiurl + "&i=" + id).then(({data}) => {
       let result = data;
+      console.log(result)
 
       setState(preveState =>{
         return {...preveState, selected: result }
@@ -56,7 +57,12 @@ function App() {
       </header>
       <main>
         <Search handleInput={handleInput} search={search}/>
-        <Results results={state.results} />
+
+        <Results results={state.results} openPopup={openPopup}/>
+        
+        {(typeof state.selected.Title !=='undefined' ) ? <Popup 
+        selected={state.selected} 
+        closePopup={closePopup}/> : false}
       </main>
     </div>
   );
