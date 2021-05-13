@@ -1,6 +1,7 @@
 import React, { useState }from 'react';
 import Search from './components/Search'
 import Results from './components/Results'
+import Popup from './components/Popup'
 import axios from 'axios'
 
 function App() {
