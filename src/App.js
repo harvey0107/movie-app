@@ -3,6 +3,7 @@ import Search from './components/Search'
 import Results from './components/Results'
 import Popup from './components/Popup'
 import axios from 'axios'
+import { BiCameraMovie } from 'react-icons/bi';
 
 function App() {
   const [state, setState] = useState({
@@ -53,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header>
-       <h1>Movie Database</h1>
+       <h1><BiCameraMovie className="logo"/>Movie Database</h1>
       </header>
       <main>
         <Search handleInput={handleInput} search={search}/>

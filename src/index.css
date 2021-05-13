@@ -7,10 +7,10 @@
 body {
   font-family: sans-serif;
   background-color: black;
-  
+  background-position: center;
   background-image: url("./img/movie.jpg");
-  background-size:cover
-  
+  background-size:cover;
+  background-repeat: no-repeat;
 
 
 }
@@ -26,9 +26,19 @@ header h1{
   font-weight: 700;
 }
 
+header .logo{
+  height: 38px;
+  width: 38px;
+  color: white;
+ margin-right: 1%;
+ 
+ 
+
+}
+
 main {
   width: 100%;
-  max-width: 960px;
+  
   margin: 0;
   border: none;
 }
@@ -102,7 +112,10 @@ section{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-image: url("./img/movie3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow:scroll;
 }
 
